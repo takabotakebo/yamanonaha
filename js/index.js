@@ -5,8 +5,6 @@ var vm = new Vue({
   },
   methods: {
     // Vue.jsで使う関数はここで記述する
-    imgclick: function() {
-      location.href = "./regist.html";
     }
   },
   created: function() {
