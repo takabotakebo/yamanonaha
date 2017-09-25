@@ -11,7 +11,7 @@
     <title></title>
 
     <!-- Semantic UI を読み込む -->
-    <!-- <link rel="stylesheet" href="https://cdn.jsdelivr.net/semantic-ui/2.2.10/semantic.min.css"> -->
+    <!--<link rel="stylesheet" href="https://cdn.jsdelivr.net/semantic-ui/2.2.10/semantic.min.css">-->
     <!-- Vue.js を読み込む -->
     <script src="https://unpkg.com/vue@2.3.3/dist/vue.js"></script>
     <script src="./components/foodcard.js" charset="utf-8"></script>
@@ -24,31 +24,53 @@
     <div id="app">
 
      <div id="first_viwe">
-       <img class="title" src="./img/yamanonaha.png">
-       <div class="hazimeni">
-       <img class="hazimeni-inner"src="./img/hazimeni.png" height="50%" width="auto">
-     </div>
-     <div id=round>
-       <div class="round1">
-         <div class="round1_inner">
-         <p>
-           honnbunn
-         </p>
+       <div class="header-image">
+         <img class="title" src="./img/yamanonaha.png">
        </div>
+       <div class="hazimeni">
+         <img class="hazimeni-inner"src="./img/hazimeni.png" height="50%" width="auto">
+       </div>
+       <div id=round>
+         <div class="round1">
+           <div class="round1_inner">
+             <p>honnbunn</p>
+           </div>
+         </div>
        </div>
        <div class="round2">
          <div class="round2_inner">
-         <p>
-          　本文
-        </p>
+           <p>本文</p>
+         </div>
        </div>
      </div>
-   </div>
-   <food-card></food-card>
+
+
+      <section id="sansaiSlot">
+        <section class="items">
+          <div class="slot" v-bind:class = "{visible: viewslotData.state == true }">
+            <div class="textcard">
+              <p>{{ viewslotData.textSansai }}</p>
+            </div>
+            <img class="dish" src="./img/dishsansai.png">
+            <img v-bind:src='viewslotData.imgSansai' />
+          </div>
+          <div class="slot" v-bind:class = "{visible: viewslotData.state == true }">
+            <div class="textcard">
+              <p>{{ viewslotData.textFood }}</p>
+            </div>
+            <img class="dish" src="./img/dishfood.png">
+            <img v-bind:src='viewslotData.imgFood' />
+          </div>
+        </section>
+        <input type="button"  value="表示" v-on:click="viewslot">
+      </section>
+
+      <food-card></food-card>
+
     </div>
-</div>
     <!-- 各ページで使うJavaScriptファイルはこの行より下で読み込む -->
     <!-- <script src="./components/header.js" charset="utf-8"></script> -->
     <script src="./js/index.js" charset="utf-8"></script>
+    <script src="./js/slot.js" charset="utf-8"></script>
   </body>
 </html>
