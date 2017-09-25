@@ -2,28 +2,73 @@
 body {
 }
  #first_viwe {
-  background-color: #ffffff;
+    background-image: url(./img/first.jpg);
+    background-repeat: no-repeat;
+    background-position: center;
+  height:25vh;
+  font-weight: normal;
   font-size:12pt;
-  font-family:"ヒラギノ明朝 Pro W3",sans-serif;
+  font-family:"ヒラギノ明朝 Pro W3",serif;
  }
- #first_viwe h1{
-  font-size: 40pt;
+ .title{
+   display: block;
+   margin-left: auto;
+   margin-right: auto;
+   text-align: center;
+   width:auto;
+   height: 50%;
  }
- .round1{
-   position:relative;
-   top:10%;
-   left:20%;
-  height: 700px;
-  width:700px;
-  border: solid 10px #000000;
+
+ .hazimeni{
+   background-color: #ffffff;
+ }
+
+ .hazimeni-inner{
+   padding: 20px;
+   display: block;
+   margin-left: auto;
+   margin-right: auto;
+   width: 10%;
+   min-width: 200px;
+   max-width: 300px;
+ }
+
+ #round{
+   background-color: #f1e0c4;
+   height:180vh;
+ }
+ .round1 {
+   position:absolute;
+   top:50%;
+   left:-50px;
+  height: 50vw;
+  width:50vw;
+  background-color: #ffffff;
+  border: solid 10px #c14140;
   border-radius: 50%;
+  display:flex;
+  justify-content: center;
+  align-items: center;
  }
- .round2{
-   position:relative;
-   top:10%;
-   right:50%;
-   height: 700px;
-   width:700px;
-  border: solid 10px #000000;
+
+ .round1_inner{
+   width:30vw;
+   height:30vw;
+ }
+ .round2 {
+   position:absolute;
+   top:100%;
+   right:-50px;
+   height: 50vw;
+   width:50vw;
+  background-color: #ffffff;
+  border: solid 10px #c14140;
   border-radius: 50%;
+  display:flex;
+  justify-content: center;
+  align-items: center;
+ }
+ .round2_inner{
+   width:30vw;
+   height:30vw;
  }
