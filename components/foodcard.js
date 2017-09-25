@@ -1,7 +1,7 @@
 Vue.component("food-card", {
   template:`<div class="ui card">
     <div class="image">
-      <img src="./img/sansai.jpg">
+      <img src="./img/dish01.jpg">
     </div>
     <div class="content">
       <a class="header">Kristy</a>
