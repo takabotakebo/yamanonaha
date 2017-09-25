@@ -1,3 +1,29 @@
 /* 全体で共通のCSSはこのファイルに記述する */
 body {
 }
+ #first_viwe {
+  background-color: #ffffff;
+  font-size:12pt;
+  font-family:"ヒラギノ明朝 Pro W3",sans-serif;
+ }
+ #first_viwe h1{
+  font-size: 40pt;
+ }
+ .round1{
+   position:relative;
+   top:10%;
+   left:20%;
+  height: 700px;
+  width:700px;
+  border: solid 10px #000000;
+  border-radius: 50%;
+ }
+ .round2{
+   position:relative;
+   top:10%;
+   right:50%;
+   height: 700px;
+   width:700px;
+  border: solid 10px #000000;
+  border-radius: 50%;
+ }
