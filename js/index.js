@@ -41,7 +41,7 @@ var vm = new Vue({
         if(vm.viewslotData.state == true){
           var viewslotdiv = function(){vm.viewslotData.state = true;};
           vm.viewslotData.state = false;
-          setTimeout(viewslotdiv, 1000);
+          setTimeout(viewslotdiv, 500);
         }else {
           vm.viewslotData.state = true;
         }
