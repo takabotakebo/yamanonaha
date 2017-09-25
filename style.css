@@ -1,6 +1,7 @@
 /* 全体で共通のCSSはこのファイルに記述する */
 body {
 }
+
  #first_viwe {
     background-image: url(./img/first.jpg);
     background-repeat: no-repeat;
