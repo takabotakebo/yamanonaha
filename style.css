@@ -23,13 +23,18 @@ body {
   width: 100%;
   height: 300px;
   background-color: gray;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: center;
 }
 
 .slot {
   display: none;
   width: 500px;
-  height: 500px;
+  height: 300px;
   background-color: green;
+  margin: 0px 10px 0px 10px;
 }
 
 .visible {

@@ -24,7 +24,10 @@
 
       <section id="sansaiSlot">
         <section class="items">
-          <div class="slot" v-bind:class = "{visible: viewslotData.state == true }">{{ viewslotData.textSansai }}</div>
+          <div class="slot" v-bind:class = "{visible: viewslotData.state == true }">
+            <p>{{ viewslotData.textSansai }}</p>
+            <img src="./img/sansai/0.png">
+          </div>
           <div class="slot" v-bind:class = "{visible: viewslotData.state == true }">{{ viewslotData.textFood }}</div>
         </section>
         <input type="button"  value="表示" v-on:click="viewslot">
