@@ -11,6 +11,11 @@ body {
   width: 100%;
 }
 
+a {
+  margin: 0 0;
+  padding: 0 0;
+}
+
 #first_viwe {
   position: relative;
   height:180vh;
@@ -48,7 +53,7 @@ body {
   display: block;
   margin-left: auto;
   margin-right: auto;
-  width: 240px;
+  width: 340px;
 }
 
 #round{
@@ -74,6 +79,21 @@ body {
   height:30vw;
 }
 
+.round1_inner h1{
+  font-weight: normal;
+  font-size:25pt;
+  font-family:"ヒラギノ明朝 Pro W3",serif;
+}
+.round1_inner p{
+  font-weight: normal;
+  font-size:12pt;
+  font-family:"ヒラギノ明朝 Pro W3",serif;
+}
+
+.round1_inner img{
+  width: 400px;
+}
+
 .round2 {
   position:absolute;
   top:600px;
@@ -92,6 +112,11 @@ body {
   height:30vw;
 }
 
+.round2_inner p{
+  font-weight: normal;
+  font-size:12pt;
+  font-family:"ヒラギノ明朝 Pro W3",serif;
+}
 
 #sansaiSlot {
   position: relative;
@@ -101,7 +126,7 @@ body {
   flex-wrap: wrap;
   align-items: center;
   justify-content: center;
-  margin: 0 0 100px 0;
+  margin: 60px 0 100px 0;
 
 }
 
@@ -126,7 +151,7 @@ body {
   position: relative;
   display: none;
   opacity: 0;
-  width: 500px;
+  width: 400px;
   height: 300px;
   margin: 0px 10px 0px 10px;
   -webkit-transition: 3.0s ease-in-out;
@@ -182,100 +207,42 @@ body {
   display:flex;
   justify-content: space-around;
 }
-.ui.card, .ui.cards>.card {
-    max-width: 100%;
-    position: relative;
-    display: flex;
-    flex-direction: column;
-    width: 290px;
-    min-height: 0;
-    background: #f1e0c4;
-    padding: 0;
-    border: none;
-    border-radius: .28571429rem;
-    box-shadow: 0 3px 5px 0 rgba(71, 71, 71, 0.5), 0 0 0 1px rgba(71, 71, 71, 0.5);
-    -webkit-transition: box-shadow .1s ease,-webkit-transform .1s ease;
-    transition: box-shadow .1s ease,-webkit-transform .1s ease;
-    transition: box-shadow .1s ease,transform .1s ease;
-    transition: box-shadow .1s ease,transform .1s ease,-webkit-transform .1s ease;
-    z-index: '';
-    margin-bottom: 200px;
+
+.card{
+  margin: 0;
+  padding: 0;
+  width: 700px;
+  height: 700px;
+  border-radius: 50%;
+  background-color: #fef8ee ;
+  border: solid 10px #c14140 ;
 }
-.ui.card>.image>img, .ui.cards>.card>.image>img {
-    display: block;
-    width: 100%;
-    height: auto;
-    border-radius: .28571429rem;
+.card__image{
+  position: relative;
+  top: 0px;
+  left: 0px;
+  width: 700px;
+  height: 700px;
+  border-radius: 50%;
+  background-image: url("./img/guratan.jpg");
+  background-repeat: no-repeat;
+
 }
-.ui.card>.content, .ui.cards>.card>.content {
-    -webkit-box-flex: 1;
-    -webkit-flex-grow: 1;
-    -ms-flex-positive: 1;
-    flex-grow: 1;
-    border: none;
-    border-top: 1px solid rgba(34,36,38,.1);
-    background: 0 0;
-    margin: 0;
-    padding: 1em;
-    box-shadow: none;
-    font-size: 1em;
-    border-radius: 0;
+.card__text{
+  width: 60%;
+  margin: 0 auto;
+  position: relative;
+  top: -230px;
 }
-.ui.card>.content>.header:not(.ui), .ui.cards>.card>.content>.header:not(.ui) {
-    font-weight: 700;
-    font-size: 1.28571429em;
-    margin-top: -.21425em;
-    line-height: 1.28571429em;
-}.ui.card>.content>a.header, .ui.cards>.card>.content>a.header {
-    color: rgba(0,0,0,.85);
+.card__text h1{
+  text-align: center;
 }
-.ui.card>.content a:not(.ui), .ui.cards>.card>.content a:not(.ui) {
-    color: '';
-    -webkit-transition: color .1s ease;
-    transition: color .1s ease;
-}
-.ui.card>.content>.header, .ui.cards>.card>.content>.header {
-    display: block;
-    margin: '';
-    font-family: Lato,'Helvetica Neue',Arial,Helvetica,sans-serif;
-    color: rgba(0,0,0,.85);
-}
-.ui.card a, .ui.cards>.card a {
-    cursor: pointer;
-}
-a {
-    background: 0 0;
-    color: #4183C4;
-    text-decoration: none;
-}
-.ui.card .meta, .ui.cards>.card .meta {
-    font-size: 1em;
-    color: rgba(0,0,0,.4);
-}.ui.card>.content>.header+.description, .ui.card>.content>.meta+.description, .ui.cards>.card>.content>.header+.description, .ui.cards>.card>.content>.meta+.description {
-    margin-top: .5em;
+.card__text p{
+  line-height: 1em;
+  margin-top: 0;
+  margin-bottom: 0;
 }
 
-.ui.card>.content>.description, .ui.cards>.card>.content>.description {
-    clear: both;
-    color: rgba(0,0,0,.68);
-}
-.ui.card>.extra, .ui.cards>.card>.extra {
-    max-width: 100%;
-    min-height: 0!important;
-    -webkit-box-flex: 0;
-    -webkit-flex-grow: 0;
-    -ms-flex-positive: 0;
-    flex-grow: 0;
-    border-top: 1px solid rgba(0,0,0,.05)!important;
-    position: static;
-    background: 0 0;
-    width: auto;
-    margin: 0;
-    padding: .75em 1em;
-    top: 0;
-    left: 0;
-    color: rgba(0,0,0,.4);
-    box-shadow: none;
-    -webkit-transition: color .1s ease;
-    transition: color .1s ease;
+.gazougomakashi {
+    width:100vw;
 }

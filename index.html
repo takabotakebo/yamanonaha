@@ -33,13 +33,18 @@
        <div id=round>
          <div class="round1">
            <div class="round1_inner">
-             <p>honnbunn</p>
+             <h1>山菜の味わい方</h1>
+             <p>山菜を料理するとき、いろいろな方法がありますが、洋食に持に用いられるような食材を使って料理したことありますか？
+             </p>
+             <img src="./img/sansai.jpg" width="400"height="auto">
            </div>
          </div>
        </div>
        <div class="round2">
          <div class="round2_inner">
-           <p>本文</p>
+         <p>みなさんは今から山菜と山菜とは合わなそうな食材がランダムで生成されます。二つの食材を合わせた料理にチャレンジしてみましょう。
+          </p>
+          <img src="./img/howtouse.png" width="450"height="auto">
          </div>
        </div>
      </div>
@@ -64,15 +69,30 @@
             <img v-bind:src='viewslotData.imgFood' />
           </div>
         </section>
-        <input type="button"  class="ui button"value="表示" v-on:click="viewslot">
+        <input type="button"  class="ui button large" value="材料を決める" v-on:click="viewslot">
       </section>
 
-      <food-card></food-card>
+      <section>
+        <a href="./menu.html">
+          <img class="gazougomakashi" src="./img/recipie01.png">
+        </a>
+      </section>
+
+      <section >
+        <a href="./menu.html">
+          <img class="gazougomakashi" src="./img/recipie02.png">
+        </a>
+      </section>
+
+      <section>
+        <img class="gazougomakashi" src="./img/index_bottom.png">
+      </section>
 
     </div>
     <!-- 各ページで使うJavaScriptファイルはこの行より下で読み込む -->
     <!-- <script src="./components/header.js" charset="utf-8"></script> -->
     <script src="./js/index.js" charset="utf-8"></script>
     <script src="./js/slot.js" charset="utf-8"></script>
+    <script src="./js/foodcard.js" charset="utf-8"></script>
   </body>
 </html>

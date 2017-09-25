@@ -11,27 +11,13 @@ var vm = new Vue({
     },
     sansaiData : {
       "0" : "ふきのとう",
-      "1" : "ふきのとう",
-      "2" : "ふきのとう",
-      "3" : "わらび",
-      "4" : "わらび",
-      "5" : "わらび",
-      "6" : "のびる",
-      "7" : "のびる",
-      "8" : "のびる",
-      "9" : "のびる"
+      "1" : "わらび",
+      "2" : "のびる"
     },
     foodData : {
       "0" : "マカロニ",
-      "1" : "マカロニ",
-      "2" : "マカロニ",
-      "3" : "パスタ",
-      "4" : "パスタ",
-      "5" : "パスタ",
-      "6" : "ケーキ",
-      "7" : "ケーキ",
-      "8" : "ケーキ",
-      "9" : "ケーキ"
+      "1" : "パスタ",
+      "2" : "ケーキ"
     }
   },
   methods: {
@@ -46,9 +32,8 @@ var vm = new Vue({
           vm.viewslotData.state = true;
         }
 
-
-        var numSansai = Math.floor(Math.random()*10);
-        var numFood = Math.floor(Math.random()*10);
+        var numSansai = Math.floor(Math.random()*3);
+        var numFood = Math.floor(Math.random()*3);
         vm.viewslotData.textSansai = vm.sansaiData[numSansai];
         vm.viewslotData.textFood = vm.foodData[numFood];
 
