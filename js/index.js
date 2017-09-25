@@ -5,7 +5,9 @@ var vm = new Vue({
     viewslotData:{
       state:false,
       textSansai:"変化前",
-      textFood:"変化前"
+      textFood:"変化前",
+      imgSansai:"img",
+      imgFood:"img",
     },
     sansaiData : {
       "0" : "ふきのとう",
@@ -20,8 +22,8 @@ var vm = new Vue({
       "9" : "わらび"
     },
     foodData : {
-      "0" : "パスタ",
-      "1" : "マカロニ",
+      "0" : "マカロニ",
+      "1" : "パスタ",
       "2" : "ジェラート",
       "3" : "ケーキ",
       "4" : "ローグルト",
@@ -36,12 +38,22 @@ var vm = new Vue({
     // Vue.jsで使う関数はここで記述する
     viewslot: function(){
 
-        vm.viewslotData.state = true;
+        if(vm.viewslotData.state == true){
+          var viewslotdiv = function(){vm.viewslotData.state = true;};
+          vm.viewslotData.state = false;
+          setTimeout(viewslotdiv, 1000);
+        }else {
+          vm.viewslotData.state = true;
+        }
+
 
         var numSansai = Math.floor(Math.random()*10);
         var numFood = Math.floor(Math.random()*10);
         vm.viewslotData.textSansai = vm.sansaiData[numSansai];
         vm.viewslotData.textFood = vm.foodData[numFood];
+
+        vm.viewslotData.imgSansai = "./img/sansai/" + numSansai + ".png";
+        vm.viewslotData.imgFood = "./img/food/" + numFood + ".png";
     }
   },
   created: function() {
