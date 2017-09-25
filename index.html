@@ -26,12 +26,16 @@
       <section id="sansaiSlot">
         <section class="items">
           <div class="slot" v-bind:class = "{visible: viewslotData.state == true }">
-            <p>{{ viewslotData.textSansai }}</p>
+            <div class="textcard">
+              <p>{{ viewslotData.textSansai }}</p>
+            </div>
             <img class="dish" src="./img/dishsansai.png">
             <img v-bind:src='viewslotData.imgSansai' />
           </div>
           <div class="slot" v-bind:class = "{visible: viewslotData.state == true }">
-            <p>{{ viewslotData.textFood }}</p>
+            <div class="textcard">
+              <p>{{ viewslotData.textFood }}</p>
+            </div>
             <img class="dish" src="./img/dishfood.png">
             <img v-bind:src='viewslotData.imgFood' />
           </div>
