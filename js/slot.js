@@ -18,5 +18,8 @@ var herbs = jsondata;
 //ランダムに数値を表示させる処理。
 function slot(num) {
   var i = Math.floor(Math.random()*10);
-  document.getElementById('slot_'+ num).innerHTML = herbs[i] ;
+  var dom = document.getElementsByClassName('slot_1');
+  console.log(dom);
+  dom.innerHTML = herbs[i];
+
 }

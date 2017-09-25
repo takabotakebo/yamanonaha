@@ -22,17 +22,13 @@
     <!-- Vue.jsで読み込む -->
     <div id="app">
 
-
-      <section>
-        <h1>スロットゲーム</h1>
-        <span id="slot_0">0</span>
-        <input type="button"  value="ストップ" onclick="slot(0);">
-        <span id="slot_1">0</span>
-        <input type="button"  value="ストップ" onclick="slot(1);">
+      <section id="sansaiSlot">
+        <section class="items">
+          <div class="slot" v-bind:class = "{visible: viewslotData.state == true }">{{ viewslotData.textSansai }}</div>
+          <div class="slot" v-bind:class = "{visible: viewslotData.state == true }">{{ viewslotData.textFood }}</div>
+        </section>
+        <input type="button"  value="表示" v-on:click="viewslot">
       </section>
-
-
-
 
     </div>
 
